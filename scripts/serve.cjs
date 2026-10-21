@@ -2,7 +2,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
-const files = { '/': ['index.html','text/html'], '/index.html': ['index.html','text/html'], '/styles.css': ['styles.css','text/css'], '/engine.js': ['engine.js','text/javascript'], '/app.js': ['app.js','text/javascript'] };
+const files = { '/': ['index.html','text/html'], '/index.html': ['index.html','text/html'], '/styles.css': ['styles.css','text/css'], '/engine.js': ['engine.js','text/javascript'], '/app.js': ['app.js','text/javascript'], '/assets/tokenizer.js': ['assets/tokenizer.js','text/javascript'], '/token-worker-client.js': ['token-worker-client.js','text/javascript'] };
 http.createServer((req, res) => {
   const entry = files[req.url.split('?')[0]];
   if (!entry) { res.writeHead(404); res.end('No encontrado'); return; }

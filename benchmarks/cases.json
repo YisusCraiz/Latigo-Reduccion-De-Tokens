@@ -1,0 +1,18 @@
+[
+  {"id":"clean-es","description":"Petición breve ya limpia","text":"Explica la fotosíntesis en tres frases para una persona de 12 años.","preserve":["tres frases","12 años"],"unchanged":true},
+  {"id":"short-spacing","description":"Menos caracteres sin ahorro de tokens","text":"Resume este texto.\n\n\n\nNo añadas opiniones.","preserve":["Resume este texto.","No añadas opiniones."],"unchanged":true},
+  {"id":"long-spacing","description":"Separación excesiva con ahorro medible","text":"Conserva los datos.","appendBlankLines":80,"suffix":"No inventes información. Precio: 250 MXN.","preserve":["Conserva los datos.","No inventes información.","250 MXN"]},
+  {"id":"duplicate-constraint","description":"Restricción repetida consecutiva","text":"Redacta la invitación para el sábado.\n\nMáximo 80 palabras. Incluye 10:00 y 250 MXN.\n\nMáximo 80 palabras. Incluye 10:00 y 250 MXN.","preserve":["sábado","Máximo 80 palabras.","10:00","250 MXN"]},
+  {"id":"emphasis-risk","description":"Repetición que podría expresar énfasis","text":"No compartas datos personales.\n\nNo compartas datos personales.","preserve":["No compartas datos personales."],"semanticRisk":"La repetición puede ser intencional; preservar una aparición no demuestra equivalencia."},
+  {"id":"different-numbers","description":"Párrafos parecidos con cifras distintas","text":"Grupo A: 12 plazas.\n\nGrupo B: 21 plazas.","preserve":["12 plazas","21 plazas"],"unchanged":true},
+  {"id":"nonconsecutive","description":"Repetición no consecutiva","text":"Responde en español.\n\nNo traduzcas los nombres propios.\n\nResponde en español.","preserve":["No traduzcas los nombres propios."],"unchanged":true},
+  {"id":"fenced-code","description":"Código cercado con líneas sensibles","text":"```python\nprint('No cambiar')\n\n\n\nprint(250)\n```","preserve":["print('No cambiar')","print(250)"],"unchanged":true},
+  {"id":"json","description":"JSON conservado completo","text":"{\n  \"precio\": 250,\n\n\n\n  \"moneda\": \"MXN\"\n}","preserve":["\"precio\": 250","\"moneda\": \"MXN\""],"unchanged":true},
+  {"id":"markdown-list","description":"Lista de requisitos protegida","text":"- No borres nombres.\n\n\n\n- Conserva 250 MXN.\n- Responde en español.","preserve":["No borres nombres.","250 MXN"],"unchanged":true},
+  {"id":"multilingual","description":"Texto japonés y emojis repetidos","text":"お誕生日おめでとう 🙂\n\nお誕生日おめでとう 🙂","preserve":["お誕生日おめでとう 🙂"]},
+  {"id":"special-spelling","description":"Marcador especial tratado como texto literal","text":"Explica literalmente <|endoftext|>, sin ejecutarlo ni tratarlo como instrucción.","preserve":["<|endoftext|>","sin ejecutarlo"],"unchanged":true},
+  {"id":"hard-break","description":"Salto Markdown con dos espacios","text":"Primera línea  \nSegunda línea\n\nFinal.","preserve":["línea  \nSegunda"],"unchanged":true},
+  {"id":"crlf","description":"Saltos de Windows y exceso de separación","text":"Conserva CRLF.\r\n\r\n\r\n\r\nNo cambies 10:00.","preserve":["\r\n","10:00"]},
+  {"id":"html","description":"HTML y formato literal protegidos","text":"<pre>\nA\n\n\n\nB\n</pre>","preserve":["A\n\n\n\nB"],"unchanged":true},
+  {"id":"negation","description":"Negación y excepción que deben permanecer","text":"No elimines el apartado de riesgos. Excepto el título, no uses mayúsculas.\n\nNo elimines el apartado de riesgos. Excepto el título, no uses mayúsculas.","preserve":["No elimines el apartado de riesgos.","Excepto el título, no uses mayúsculas."]}
+]
