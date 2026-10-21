@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reduce contexto innecesario antes de enviarlo a tu IA. Local, transparente y sin claves.">
+  <title>Látigo · Menos ruido, misma intención</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="engine.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./" aria-label="Látigo, inicio">látigo<span>↝</span></a><span class="version">LAB / V0.1</span><a class="repo" href="https://github.com/YisusCraiz/Latigo-Reduccion-De-Tokens" target="_blank" rel="noopener noreferrer">Código abierto ↗</a></header>
+  <main>
+    <section class="intro">
+      <div><p class="eyebrow"><span class="dot"></span> TU CONTEXTO, SIN EL EXCESO</p><h1>Menos ruido.<br><em>Más intención.</em></h1><p class="lede">Limpia tu petición antes de llevarla a tu IA favorita.<br>Sin cuentas. Sin claves. Todo en tu navegador.</p></div>
+      <div class="whip" aria-hidden="true"><svg viewBox="0 0 300 180"><path class="trail" d="M28 145 C90 145 40 15 145 38 S270 155 185 141 S105 69 270 35"/><path class="handle" d="M14 155 L47 123"/></svg><span>UN GESTO CONTRA EL DESPERDICIO</span></div>
+    </section>
+    <section class="workspace" aria-label="Optimizador de contexto">
+      <div class="toolbar"><div><span class="number">01</span> Prepara tu contexto</div><button class="text-button" id="example">Cargar ejemplo ↗</button></div>
+      <div class="editors">
+        <div class="editor"><label for="original">Tu petición <span>ORIGINAL</span></label><textarea id="original" placeholder="Pega aquí tu petición o contexto…" spellcheck="false" maxlength="200000"></textarea><div class="editor-foot"><span id="input-count">0 caracteres</span><button class="text-button" id="clear">Limpiar</button></div></div>
+        <div class="editor result"><label for="optimized">Versión preparada <span>REVISABLE</span></label><textarea id="optimized" placeholder="Tu versión optimizada aparecerá aquí." readonly spellcheck="false"></textarea><div class="editor-foot"><span id="output-count">0 caracteres</span><button class="text-button" id="copy" disabled>Copiar resultado ↗</button></div></div>
+      </div>
+      <div class="controls"><div class="options"><label><input type="checkbox" id="spacing" checked> Reducir líneas vacías excesivas</label><label><input type="checkbox" id="duplicates"> Omitir párrafos consecutivos idénticos <span class="tag">OPCIONAL</span></label><p>La repetición puede expresar énfasis. Revisa los cambios si activas esta opción.</p></div><button class="primary" id="optimize">Optimizar contexto <span>↗</span></button></div>
+    </section>
+    <section class="metrics" aria-label="Comparación estimada"><div><span class="metric-label">ENTRADA ESTIMADA</span><strong id="before">—</strong><small>tokens aproximados</small></div><div><span class="metric-label">SALIDA ESTIMADA</span><strong id="after">—</strong><small>tokens aproximados</small></div><div class="savings"><span class="metric-label">REDUCCIÓN DE TEXTO</span><strong id="saving">—</strong><small id="saved-chars">sin cambios todavía</small></div><div class="metric-note"><span>≈ NO ES UN CONTADOR EXACTO</span><p>Estimación: caracteres ÷ 4. El tokenizador de cada modelo puede dar un resultado diferente. Menos caracteres no garantiza menos tokens ni menor coste.</p></div></section>
+    <section class="review"><div class="review-heading"><h2><span class="number">02</span> Revisa antes de enviar</h2><span id="change-count">Sin análisis</span></div><p id="status" role="status" aria-live="polite">Tu texto no se envía ni se guarda. Tú decides qué copiar.</p><ol id="changes"></ol></section>
+    <section class="principles"><article><span>01 / LOCAL</span><h3>Tu texto se queda contigo.</h3><p>No usamos servidores, analítica ni llamadas a modelos para procesar tu petición.</p></article><article><span>02 / CONSERVADOR</span><h3>Sin reescrituras ocultas.</h3><p>El modo predeterminado conserva las palabras. Protegemos código y formatos estructurados reconocidos.</p></article><article><span>03 / HONESTO</span><h3>El resultado se comprueba.</h3><p>No prometemos equivalencia universal. Revisa la salida y valida tu tarea con el modelo que utilices.</p></article></section>
+  </main><footer><span>látigo ↝</span><p>Una pequeña herramienta para un contexto más consciente.</p><span>HECHO PARA COMPARTIR</span></footer>
+</body>
+</html>
